@@ -8,9 +8,14 @@ function SearchBar({ onSubmit }) {
     setSearchTerm(event.target.value);
   };
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = async (event) => {
     if (event.key === "Enter") {
-      onSubmit(searchTerm);
+      try {
+        const videos = await onSubmit(searchTerm);
+        console.log("Fetched videos:", videos);
+      } catch (error) {
+        console.error("Error during video fetch:", error);
+      }
     }
   };
 
