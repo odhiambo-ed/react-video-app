@@ -7,7 +7,9 @@ function App() {
     <Grid style={{ justifyContent: "center" }} container spacing={10}>
       <Grid item xs={11}>
         <Grid container spacing={10}>
-          <Grid>{SearchBar}</Grid>
+          <Grid>
+            <SearchBar />
+          </Grid>
           {/* <Grid>{VideoDetail}</Grid>
           <Grid>{VideoList}</Grid> */}
         </Grid>
