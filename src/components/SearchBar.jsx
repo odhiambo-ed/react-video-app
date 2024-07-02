@@ -1,7 +1,8 @@
 import {useState} from 'react'
 import { Paper, TextField } from '@mui/material'
 
-function SearchBar() {
+function SearchBar(props) {
+    const { onsubmit } = props;
     const [searchTerm, setSearchTerm] = useState('')
 
     const handleChange = (event) => { 
