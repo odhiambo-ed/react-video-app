@@ -5,14 +5,14 @@ import { getYouTubeVideos } from './api/youTube';
 
 function App() {
   return (
-    <Grid style={{ justifyContent: "center" }} container spacing={10}>
+    <Grid style={{ justifyContent: 'center' }} container spacing={10}>
       <Grid item xs={11}>
         <Grid container spacing={10}>
           <Grid item xs={12}>
-            <SearchBar onSubmit = {getYouTubeVideos} />
+            <SearchBar onSubmit={getYouTubeVideos} /> {/* Ensure the prop name matches */}
           </Grid>
           {/* <Grid>{VideoDetail}</Grid>
-          <Grid>{VideoList}</Grid> */}
+                    <Grid>{VideoList}</Grid> */}
         </Grid>
       </Grid>
     </Grid>
