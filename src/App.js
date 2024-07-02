@@ -6,18 +6,23 @@ import { useState } from 'react';
 import VideoDetail from './components/VideoDetail';
 
 function App() {
-  const [selectedVideo, setSelectedVideo] = useState({id: {videoId: ''}, snippet: {title: '', description: ''}});
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  const handleVideoSelect = (video) => {
+    setSelectedVideo(video);
+  };
+
   return (
     <Grid style={{ justifyContent: 'center' }} container spacing={10}>
       <Grid item xs={11}>
         <Grid container spacing={10}>
           <Grid item xs={12}>
-            <SearchBar onSubmit={getYouTubeVideos} />
+            <SearchBar onSubmit={handleVideoSelect} />
           </Grid>
-          <Grid>
+          <Grid item xs={12}>
             <VideoDetail video={selectedVideo} />
           </Grid>
-          <Grid>{VideoList}</Grid>
+          {/* <Grid>{VideoList}</Grid> */}
         </Grid>
       </Grid>
     </Grid>

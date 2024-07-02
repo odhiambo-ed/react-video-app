@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Paper, TextField } from "@mui/material";
 
 function SearchBar({ onSubmit }) {
-    const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
@@ -13,6 +13,9 @@ function SearchBar({ onSubmit }) {
       try {
         const videos = await onSubmit(searchTerm);
         console.log("Fetched videos:", videos);
+        if (videos && videos.length > 0) {
+          onSubmit(videos[0]);
+        }
       } catch (error) {
         console.error("Error during video fetch:", error);
       }
