@@ -7,6 +7,7 @@ const api = axios.create({
 });
 
 export const getYouTubeVideos = async (searchTerm) => {
+    const [videos, setVideos] = useState([]);
     try {
         const response = await api.get('/search', {
             params: {
