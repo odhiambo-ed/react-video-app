@@ -1,10 +1,17 @@
 import './App.css';
+import Grid from '@mui/material/Grid';
 
 function App() {
   return (
-    <div className="App">
-     <h1>God First</h1>
-    </div>
+    <Grid style={{ justifyContent: "center" }} container spacing={10}>
+      <Grid item xs={11}>
+        <Grid>
+          {/* <Grid>{SearchBar}</Grid>
+          <Grid>{VideoDetail}</Grid>
+          <Grid>{VideoList}</Grid> */}
+        </Grid>
+      </Grid>
+    </Grid>
   );
 }
 
