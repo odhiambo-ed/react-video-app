@@ -10,7 +10,7 @@ function SearchBar() {
 
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
-            console.log(searchTerm)
+            onsubmit(searchTerm)
         }
     }
   return (
