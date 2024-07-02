@@ -8,7 +8,7 @@ function SearchBar() {
         setSearchTerm(event.target.value)
     }
 
-    const onKeyPress = (event) => {
+    const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
             console.log(searchTerm)
         }
@@ -20,7 +20,7 @@ function SearchBar() {
               label="Search..."
               value={ searchTerm }
               onChange={ handleChange }
-              onKeyPress = { onKeyPress }
+              onKeyDown = { handleKeyPress }
           />
     </Paper>
   )
