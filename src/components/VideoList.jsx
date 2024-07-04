@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid } from '@mui/material'
+import VideoItem from './VideoItem'
 
 function VideoList({ videos, onVideoSelect }) {
   const listOfVideos = videos.map((video, id) => {
