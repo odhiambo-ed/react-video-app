@@ -13,9 +13,9 @@ function App() {
   const handleSearchSubmit = async (searchTerm) => {
     const videos = await getYouTubeVideos(searchTerm);
     if (videos && videos.length > 0) {
-      setSelectedVideo(videos[0]); // Set the first video as the selected video
+      setSelectedVideo(videos[0]);
     }
-    return videos; // Return videos for debugging purposes
+    return videos;
   };
 
   return (
