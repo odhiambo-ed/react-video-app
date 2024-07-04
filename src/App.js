@@ -8,6 +8,7 @@ import VideoList from './components/VideoList';
 
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [videos, setVideos] = useState([]);
 
   const handleSearchSubmit = async (searchTerm) => {
     const videos = await getYouTubeVideos(searchTerm);
@@ -28,7 +29,7 @@ function App() {
             <VideoDetail video={selectedVideo} />
           </Grid>
           <Grid>
-            <VideoList />
+            <VideoList videos={videos} onVideoSelect={setSelectedVideo} />
           </Grid>
         </Grid>
       </Grid>
