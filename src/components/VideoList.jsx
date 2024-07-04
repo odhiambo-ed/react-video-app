@@ -6,7 +6,11 @@ function VideoList({ videos, onVideoSelect }) {
   const listOfVideos = videos.map((video, id) => {
     return (
       <Grid key={id} item xs={12}>
-        <VideoItem video={video} onVideoSelect={onVideoSelect} />
+        <VideoItem
+          video={video}
+          onVideoSelect={onVideoSelect}
+          key={video.id.videoId}
+        />
       </Grid>
     )
   })
